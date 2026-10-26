@@ -37,11 +37,7 @@
         /* Grillas */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
         
-        @media (max-width: 900px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 500px) { .grid-4 { grid-template-columns: 1fr; } }
-
         /* Tarjetas Estilizadas de Info (Ubicación y Horarios) */
         .info-card { background: #fff; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-align: center; border-top: 6px solid var(--naranja); }
         .hours-card { background: linear-gradient(135deg, var(--azul-marino), var(--azul-claro)); color: white; border-top: 6px solid var(--amarillo-logo); }
@@ -68,7 +64,7 @@
 <body>
 
     <header>
-        <img src="Logo.jpeg" alt="Logo La Mojarrita Desnuda" class="logo-img">
+        <img src="img/Logo.jpeg" alt="Logo La Mojarrita Desnuda" class="logo-img">
     </header>
 
     <!-- 1. UBICACIÓN Y HORARIOS -->
@@ -103,7 +99,7 @@
         <h2 class="section-title">Milanesas</h2>
         <div class="grid-3">
             <div class="card">
-                <img src="MILmerluza.jpg" alt="Milanesa de Merluza">
+                <img src="img/Milanesas/MILmerluza.jpg" alt="Milanesa de Merluza">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Merluza</h3>
@@ -114,7 +110,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="MILgallo.jpg" alt="Milanesa de Gallo">
+                <img src="img/Milanesas/MILgallo.jpg" alt="Milanesa de Gallo">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Gallo</h3>
@@ -125,7 +121,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="MILpejerrey.jpg" alt="Milanesa de Pejerrey">
+                <img src="img/Milanesas/MILpejerrey.jpg" alt="Milanesa de Pejerrey">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Pejerrey</h3>
@@ -136,7 +132,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="MILpollo.jpg" alt="Milanesas de Pollo">
+                <img src="img/Milanesas/MILpollo.jpg" alt="Milanesas de Pollo">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Pollo</h3>
@@ -147,7 +143,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="MILcarne.jpg" alt="Milanesas de Carne">
+                <img src="img/Milanesas/MILcarne.jpg" alt="Milanesas de Carne">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Carne</h3>
@@ -158,7 +154,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="MILsoja.jpg" alt="Milanesas de Soja">
+                <img src="img/Milanesas/MILsoja.jpg" alt="Milanesas de Soja">
                 <div class="card-content">
                     <div>
                         <h3>Milanesas de Soja</h3>
@@ -179,7 +175,7 @@
         <div class="grid-3">
             
             <div class="card">
-                <img src="FiletMerluza.jpg" alt="Filet de Merluza">
+                <img src="img/Filets/FiletMerluza.jpg" alt="Filet de Merluza">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Merluza</h3>
@@ -191,7 +187,7 @@
             </div>
 
             <div class="card">
-                <img src="FiletGallo.jpg" alt="Filet de Gallo">
+                <img src="img/Filets/FiletGallo.jpg" alt="Filet de Gallo">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Gallo</h3>
@@ -203,7 +199,7 @@
             </div>
 
             <div class="card">
-                <img src="FiletPejerrey.jpg" alt="Filet de Pejerrey">
+                <img src="img/Filets/FiletPejerrey.jpg" alt="Filet de Pejerrey">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Pejerrey</h3>
@@ -215,7 +211,7 @@
             </div>
 
             <div class="card">
-                <img src="FiletAbadejo.jpg" alt="Filet de Abadejo">
+                <img src="img/Filets/FiletAbadejo.jpg" alt="Filet de Abadejo">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Abadejo</h3>
@@ -227,7 +223,7 @@
             </div>
 
             <div class="card">
-                <img src="FiletLenguago.jpg" alt="Filet de Lenguado">
+                <img src="img/Filets/FiletLenguago.jpg" alt="Filet de Lenguado">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Lenguado</h3>
@@ -239,7 +235,7 @@
             </div>
 
             <div class="card">
-                <img src="FiletSalmonRosado.jpg" alt="Salmón Rosado">
+                <img src="img/Filets/FiletSalmonRosado.jpg" alt="Salmón Rosado">
                 <div class="card-content">
                     <div>
                         <h3>Salmón Rosado</h3>
@@ -251,7 +247,7 @@
             </div>
 
             <div class="card">
-                <img src="FiletTruchaSalmonada.jpg" alt="Trucha Salmonada">
+                <img src="img/Filets/FiletTruchaSalmonada.jpg" alt="Trucha Salmonada">
                 <div class="card-content">
                     <div>
                         <h3>Trucha Salmonada</h3>
@@ -272,7 +268,7 @@
         <h2 class="section-title">Almacén Patagónico</h2>
         <div class="grid-2">
             <div class="card">
-                <img src="Condimentos.jpeg" alt="Almacén Patagónico">
+                <img src="img/Condimentos.jpeg" alt="Almacén Patagónico">
                 <div class="card-content">
                     <div>
                         <h3>Especias y Complementos</h3>
