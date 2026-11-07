@@ -36,8 +36,13 @@
 
         /* Grillas */
         .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        /* Cambiamos la grilla a 2 columnas para que las tarjetas e imágenes se vean más grandes */
+        .grid-productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2.5rem; }
         
+        @media (max-width: 768px) {
+            .grid-productos { grid-template-columns: 1fr; }
+        }
+
         /* Tarjetas Estilizadas de Info (Ubicación y Horarios) */
         .info-card { background: #fff; border-radius: 20px; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-align: center; border-top: 6px solid var(--naranja); }
         .hours-card { background: linear-gradient(135deg, var(--azul-marino), var(--azul-claro)); color: white; border-top: 6px solid var(--amarillo-logo); }
@@ -47,12 +52,13 @@
         /* Tarjetas de Producto */
         .card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.06); text-align: left; padding: 0 0 1.5rem 0; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-8px); box-shadow: 0 12px 20px rgba(255, 145, 0, 0.15); }
-        .card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 3px solid var(--amarillo-logo); }
+        /* Aumentamos la altura de la imagen para que se aprecie mejor el producto */
+        .card img { width: 100%; height: 300px; object-fit: cover; border-bottom: 3px solid var(--amarillo-logo); }
         
-        .card-content { padding: 1.2rem 1.2rem 0.5rem 1.2rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .card h3 { font-size: 1.25rem; color: var(--azul-marino); margin-bottom: 0.5rem; }
-        .price { font-size: 1.3rem; font-weight: 800; color: var(--naranja); margin: 0.5rem 0; }
-        .description { font-size: 0.9rem; color: #555; margin-bottom: 1rem; }
+        .card-content { padding: 1.2rem 1.5rem 0.5rem 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h3 { font-size: 1.4rem; color: var(--azul-marino); margin-bottom: 0.5rem; }
+        .price { font-size: 1.4rem; font-weight: 800; color: var(--naranja); margin: 0.5rem 0; }
+        .description { font-size: 1rem; color: #555; margin-bottom: 1rem; }
 
         /* Footer flotante WPP */
         .wpp-flotante { position: fixed; bottom: 20px; right: 20px; background: var(--verde-wpp); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; font-size: 24px; transition: 0.3s; border: 2px solid white; }
@@ -64,7 +70,7 @@
 <body>
 
     <header>
-        <img src="img/Logo.jpeg" alt="Logo La Mojarrita Desnuda" class="logo-img">
+        <img src="Logo.jpeg" alt="Logo La Mojarrita Desnuda" class="logo-img">
     </header>
 
     <!-- 1. UBICACIÓN Y HORARIOS -->
@@ -97,68 +103,62 @@
     <!-- 2. MILANESAS -->
     <section class="container" id="milanesas">
         <h2 class="section-title">Milanesas</h2>
-        <div class="grid-3">
+        <div class="grid-productos">
             <div class="card">
-                <img src="img/Milanesas/MILmerluza.jpg" alt="Milanesa de Merluza">
+                <img src="Milanesas/MILmerluza.jpg" alt="Milanesa de Merluza">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Merluza</h3>
-                        <p class="description">Artesanales, rebozado casero y crocante.</p>
                         <div class="price">$14.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20milanesas%20de%20merluza" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
                 </div>
             </div>
             <div class="card">
-                <img src="img/Milanesas/MILgallo.jpg" alt="Milanesa de Gallo">
+                <img src="Milanesas/MILgallo.jpg" alt="Milanesa de Gallo">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Gallo</h3>
-                        <p class="description">Exquisito pescado fresco rebozado.</p>
                         <div class="price">$16.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20milanesas%20de%20gallo" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
                 </div>
             </div>
             <div class="card">
-                <img src="img/Milanesas/MILpejerrey.jpg" alt="Milanesa de Pejerrey">
+                <img src="Milanesas/MILpejerrey.jpg" alt="Milanesa de Pejerrey">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Pejerrey</h3>
-                        <p class="description">Delicadas y tiernas, listas para cocinar.</p>
                         <div class="price">$16.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20milanesas%20de%20pejerrey" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
                 </div>
             </div>
             <div class="card">
-                <img src="img/Milanesas/MILpollo.jpg" alt="Milanesas de Pollo">
+                <img src="Milanesas/MILpollo.jpg" alt="Milanesas de Pollo">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Pollo</h3>
-                        <p class="description">De pechuga y muslo seleccionadas.</p>
                         <div class="price">$15.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20milanesas%20de%20pollo" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
                 </div>
             </div>
             <div class="card">
-                <img src="img/Milanesas/MILcarne.jpg" alt="Milanesas de Carne">
+                <img src="Milanesas/MILcarne.jpg" alt="Milanesas de Carne">
                 <div class="card-content">
                     <div>
                         <h3>Milanesa de Carne</h3>
-                        <p class="description">Cortes tiernos y jugosos.</p>
                         <div class="price">$19.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20milanesas%20de%20carne" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
                 </div>
             </div>
             <div class="card">
-                <img src="img/Milanesas/MILsoja.jpg" alt="Milanesas de Soja">
+                <img src="Milanesas/MILsoja.jpg" alt="Milanesas de Soja">
                 <div class="card-content">
                     <div>
                         <h3>Milanesas de Soja</h3>
-                        <p class="description">Producto artesanal patagónico Nehuen. Sin conservantes.</p>
                         <div class="price">$4.000 x paquete</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20milanesas%20de%20soja" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
@@ -167,19 +167,70 @@
         </div>
     </section>
 
-    <!-- 3. FILETS FRESCOS Y CONGELADOS -->
+    <!-- 3. PRECOCIDOS -->
+    <div class="container"><div class="separador"></div></div>
+    
+    <section class="container" id="precocidos" style="padding-top: 0;">
+        <h2 class="section-title">Precocidos</h2>
+        <div class="grid-productos">
+            <div class="card">
+                <img src="Precocidos/CroquetasJyQ.jpg" alt="Croquetas de papa con JyQ">
+                <div class="card-content">
+                    <div>
+                        <h3>Croquetas de papa con JyQ</h3>
+                        <div class="price">$14.000 x KG</div>
+                    </div>
+                    <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Croquetas%20de%20papa%20con%20JyQ" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="Precocidos/FormitasMerluza.jpg" alt="Infantiles de merluza">
+                <div class="card-content">
+                    <div>
+                        <h3>Infantiles de merluza</h3>
+                        <div class="price">$14.000 x KG</div>
+                    </div>
+                    <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Infantiles%20de%20merluza" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Precocidos/PatitasPollo.jpg" alt="Patitas de pollo">
+                <div class="card-content">
+                    <div>
+                        <h3>Patitas de pollo</h3>
+                        <div class="price">$14.000 x KG</div>
+                    </div>
+                    <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Patitas%20de%20pollo" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Precocidos/Pechuguitas.jpg" alt="Pechuguitas de pollo">
+                <div class="card-content">
+                    <div>
+                        <h3>Pechuguitas de pollo</h3>
+                        <div class="price">$18.000 x KG</div>
+                    </div>
+                    <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Pechuguitas%20de%20pollo" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FILETS FRESCOS Y CONGELADOS -->
     <div class="container"><div class="separador"></div></div>
     
     <section class="container" id="pesca-fresca" style="padding-top: 0;">
         <h2 class="section-title">Filets Frescos y Congelados</h2>
-        <div class="grid-3">
+        <div class="grid-productos">
             
             <div class="card">
-                <img src="img/Filets/FiletMerluza.jpg" alt="Filet de Merluza">
+                <img src="Filets/FiletMerluza.jpg" alt="Filet de Merluza">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Merluza</h3>
-                        <p class="description">Fresco, sin espinas, sobre hielo. Ideal para plancha o al horno.</p>
                         <div class="price">$12.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Filet%20de%20Merluza" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
@@ -187,11 +238,10 @@
             </div>
 
             <div class="card">
-                <img src="img/Filets/FiletGallo.jpg" alt="Filet de Gallo">
+                <img src="Filets/FiletGallo.jpg" alt="Filet de Gallo">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Gallo</h3>
-                        <p class="description">Excelente textura y sabor suave, directo de la costa.</p>
                         <div class="price">$14.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Filet%20de%20Gallo" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
@@ -199,11 +249,10 @@
             </div>
 
             <div class="card">
-                <img src="img/Filets/FiletPejerrey.jpg" alt="Filet de Pejerrey">
+                <img src="Filets/FiletPejerrey.jpg" alt="Filet de Pejerrey">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Pejerrey</h3>
-                        <p class="description">Frescura patagónica inigualable, sabor delicado.</p>
                         <div class="price">$14.500 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Filet%20de%20Pejerrey" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
@@ -211,11 +260,10 @@
             </div>
 
             <div class="card">
-                <img src="img/Filets/FiletAbadejo.jpg" alt="Filet de Abadejo">
+                <img src="Filets/FiletAbadejo.jpg" alt="Filet de Abadejo">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Abadejo</h3>
-                        <p class="description">Corte prémium de mar, firme y exquisito.</p>
                         <div class="price">$33.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Filet%20de%20Abadejo" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
@@ -223,11 +271,10 @@
             </div>
 
             <div class="card">
-                <img src="img/Filets/FiletLenguago.jpg" alt="Filet de Lenguado">
+                <img src="Filets/FiletLenguago.jpg" alt="Filet de Lenguado">
                 <div class="card-content">
                     <div>
                         <h3>Filet de Lenguado</h3>
-                        <p class="description">Uno de los pescados más finos y apreciados.</p>
                         <div class="price">$33.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20pedir%20Filet%20de%20Lenguado" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
@@ -235,11 +282,10 @@
             </div>
 
             <div class="card">
-                <img src="img/Filets/FiletSalmonRosado.jpg" alt="Salmón Rosado">
+                <img src="Filets/FiletSalmonRosado.jpg" alt="Salmón Rosado">
                 <div class="card-content">
                     <div>
                         <h3>Salmón Rosado</h3>
-                        <p class="description">Calidad superior. Entero o en impecables filets.</p>
                         <div class="price" style="font-size: 1.1rem;">Entero: $45.000 x KG<br>Filet: $56.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20consultar%20por%20Salmón%20Rosado" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
@@ -247,11 +293,10 @@
             </div>
 
             <div class="card">
-                <img src="img/Filets/FiletTruchaSalmonada.jpg" alt="Trucha Salmonada">
+                <img src="Filets/FiletTruchaSalmonada.jpg" alt="Trucha Salmonada">
                 <div class="card-content">
                     <div>
                         <h3>Trucha Salmonada</h3>
-                        <p class="description">De la meseta patagónica. Entera o en filet abierto.</p>
                         <div class="price" style="font-size: 1.1rem;">Entera: $45.000 x KG<br>Filet abierto: $37.000 x KG</div>
                     </div>
                     <a href="https://wa.me/5492920300899?text=Hola,%20quiero%20consultar%20por%20Trucha%20Salmonada" target="_blank" rel="noopener noreferrer" class="btn btn-wpp">Pedir por WhatsApp</a>
@@ -261,14 +306,14 @@
         </div>
     </section>
 
-    <!-- 4. ALMACÉN PATAGÓNICO -->
+    <!-- 5. ALMACÉN PATAGÓNICO -->
     <div class="container"><div class="separador"></div></div>
 
     <section class="container" id="almacen" style="padding-top: 0;">
         <h2 class="section-title">Almacén Patagónico</h2>
-        <div class="grid-2">
+        <div class="grid-productos">
             <div class="card">
-                <img src="img/Condimentos.jpeg" alt="Almacén Patagónico">
+                <img src="Condimentos.jpeg" alt="Almacén Patagónico">
                 <div class="card-content">
                     <div>
                         <h3>Especias y Complementos</h3>
